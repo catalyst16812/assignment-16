@@ -17,14 +17,14 @@ import lombok.NoArgsConstructor;
 public class Employee {
 
 	@Id
-	// @GeneratedValue(strategy = GenerationType.AUTO)
+	 @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "myid")
 	private int id;
 	@Column(name = "myname", length = 20)
 	private String name;
 	@Column(name = "myemail", length = 25, unique = true)
-//	@NotNull(message = "must include email in postman API")
-//	@NotBlank(message = "must type Value in email")
-//	@Email(message = "Please provide proper mail id")
+	@NotNull(message = "must include email in postman API")
+	@NotBlank(message = "must type Value in email")
+	@Email(message = "Please provide proper mail id")
 	private String email;
 }
